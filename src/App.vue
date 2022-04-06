@@ -1,30 +1,124 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <header>
+    <Nav/>
+  </header>
+
+  <main>
+    <router-view/>
+  </main>
+
+  <footer>
+
+  </footer>
 </template>
 
+<script>
+  import Nav from '@/components/Nav/Nav';
+  export default {
+    components: {
+      Nav,
+    },
+    data() {
+      return {
+
+      };
+    },
+    props: {},
+  }
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
+//Main styles {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  html, body, #app {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+  }
 
-    &.router-link-exact-active {
-      color: #42b983;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Play', sans-serif;
+  }
+
+  body {
+    color: var(--text-color);
+    background-color: var(--app-background-color);
+    //background: var(--body-background-image);
+    background-size: cover;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+//Main styles }
+
+//Elements styles {
+  button, .el-button {
+    font-family: 'Play', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: 600;
+    line-height: normal;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--app-background-color);
+    padding: 4px 15px;
+    transition: 220ms;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--text-light-color);
+      background: var(--accent-second-color);
+      border: 2px solid var(--border-color);
+    }
+    &:focus {
+      outline: none;
     }
   }
-}
+//Elements styles }
+
+//Colors {
+  :root {
+    --app-background-color: rgb(255, 255, 255);
+    --card-background: rgb(255, 255, 255);
+    --border-color: rgb(73, 80, 87);
+    --accent-first-color: rgb(0, 0, 0);
+    --accent-second-color: rgb(139, 0, 0);
+    --accent-third-color: rgb(73, 80, 87);
+    --text-color: rgb(53, 53, 53);
+    --text-light-color: rgb(234, 234, 234);
+    --link-color: rgb(53, 108, 232);
+    --chips-background: rgba(73, 80, 87, 0.2);
+    --chips-first-color: rgb(53, 53, 53);
+    --chips-second-color: rgb(139, 0, 0);
+    --body-background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1297550106354053812/A1E66FB86E3FA6822DAF77898802FD110FF839FB/");
+  }
+
+  [theme="dark"] {
+    --app-background-color: rgb(18, 18, 18);
+    --card-background: rgb(30, 30, 30);
+    --border-color: rgb(73, 80, 87);
+    --accent-first-color: rgb(0, 0, 0);
+    --accent-second-color: rgb(139, 0, 0);
+    --accent-third-color: rgb(73, 80, 87);
+    --text-color: rgb(220, 220, 220);
+    --text-light-color: rgb(220, 220, 220);
+    --text-sub-color: rgb(136, 136, 136);
+    --link-color: rgb(53, 108, 232);
+    --chips-background: rgb(45, 45, 45);
+    --chips-first-color: rgb(53, 53, 53);
+    --chips-second-color: rgb(225, 0, 0);
+    --body-background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1297550106354186786/9B470037E55FB1B4C58FA13D451AB2905B12405E/");
+  }
+//Colors }
 </style>
