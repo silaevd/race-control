@@ -58,6 +58,10 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  .section-title {
+    margin: 25px 0;
+  }
 //Main styles }
 
 //Elements styles {
