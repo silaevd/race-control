@@ -29,6 +29,10 @@
 
 <style lang="scss">
 
+ header {
+   background-color: var(--header-background-color);
+ }
+
 //Main styles {
   * {
     box-sizing: border-box;
@@ -48,8 +52,8 @@
 
   body {
     color: var(--text-color);
-    background-color: var(--app-background-color);
-    //background: var(--body-background-image);
+    //background-color: var(--app-background-color);
+    background: var(--body-background-image);
     background-size: cover;
   }
 
@@ -94,26 +98,29 @@
 //Colors {
   :root {
     --app-background-color: rgb(255, 255, 255);
+    --header-background-color: rgba(0,0,0,.8);
     --card-background: rgb(255, 255, 255);
-    --border-color: rgb(73, 80, 87);
+    --border-color: rgb(234, 234, 234);
     --accent-first-color: rgb(0, 0, 0);
-    --accent-second-color: rgb(139, 0, 0);
+    --accent-second-color: rgb(154, 23, 19);
     --accent-third-color: rgb(73, 80, 87);
-    --text-color: rgb(53, 53, 53);
+    --text-color: rgb(40, 40, 40);
     --text-light-color: rgb(234, 234, 234);
     --link-color: rgb(53, 108, 232);
     --chips-background: rgba(73, 80, 87, 0.2);
     --chips-first-color: rgb(53, 53, 53);
     --chips-second-color: rgb(139, 0, 0);
-    --body-background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1297550106354053812/A1E66FB86E3FA6822DAF77898802FD110FF839FB/");
+    //--body-background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1297550106354053812/A1E66FB86E3FA6822DAF77898802FD110FF839FB/");
+    --body-background-image: url("https://wallpapersmug.com/download/2560x1080/ac1f7c/the-crew-2-car-race-game.jpg");
   }
 
   [theme="dark"] {
     --app-background-color: rgb(18, 18, 18);
+    --header-background-color: rgba(0,0,0,.8);
     --card-background: rgb(30, 30, 30);
     --border-color: rgb(73, 80, 87);
     --accent-first-color: rgb(0, 0, 0);
-    --accent-second-color: rgb(139, 0, 0);
+    --accent-second-color: rgb(154, 23, 19);
     --accent-third-color: rgb(73, 80, 87);
     --text-color: rgb(220, 220, 220);
     --text-light-color: rgb(220, 220, 220);
@@ -121,7 +128,7 @@
     --link-color: rgb(53, 108, 232);
     --chips-background: rgb(45, 45, 45);
     --chips-first-color: rgb(53, 53, 53);
-    --chips-second-color: rgb(225, 0, 0);
+    --chips-second-color: rgb(139, 0, 0);
     --body-background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1297550106354186786/9B470037E55FB1B4C58FA13D451AB2905B12405E/");
   }
 //Colors }

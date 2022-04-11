@@ -86,7 +86,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
 .event-info {
@@ -152,7 +151,7 @@ export default {
       height: 0;
       border-style: solid;
       border-width: 34px 34px 0 0;
-      border-color: #8b0000 transparent transparent transparent;
+      border-color: var(--accent-second-color) transparent transparent transparent;
       position: absolute;
       top: 0;
       right: -34px;

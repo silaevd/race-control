@@ -119,7 +119,7 @@ export default {
       height: 0;
       border-style: solid;
       border-width: 27px 27px 0 0;
-      border-color: #8b0000 transparent transparent transparent;
+      border-color: var(--accent-second-color) transparent transparent transparent;
       position: absolute;
       top: 0;
       right: -27px;

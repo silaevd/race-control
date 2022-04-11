@@ -3,7 +3,8 @@
     <nav class="nav">
       <div class="logo">
         <router-link :to="{ name: 'News'}" class="">
-          <img src="https://www.chiptuningede.nl/wp-content/uploads/2019/11/Edit.png" alt="">
+<!--          <img src="https://www.chiptuningede.nl/wp-content/uploads/2019/11/Edit.png" alt="">-->
+          <span>RaceControl</span>
         </router-link>
       </div>
       <div class="menu">
@@ -11,7 +12,7 @@
         <router-link :to="{ name: 'EventsList'}" class="menu__link">Эвенты</router-link>
         <router-link :to="{ name: 'UserProfile'}" class="menu__link_profile">
           <img
-              src="https://f0.pngfuel.com/png/719/561/motorcycle-helmets-racing-helmet-motorcycle-helmets-png-clip-art.png"
+              src="https://citysakh.ru/files/news/middle/76766.jpg"
               alt=""
               class="profile-link-img"
           >
@@ -19,25 +20,30 @@
 
         <div class="settings">
           <div class="settings-item">
-            <i class="fa fa-sun-o"></i>
+            <span class="material-icons">
+              wb_sunny
+            </span>
             <el-switch
-                style="display: block"
                 v-model="darkMode"
                 active-color="#495057"
                 inactive-color="#ffa500"
             ></el-switch>
-            <i class="fa fa-moon-o"></i>
+            <span class="material-icons">
+              nightlight_round
+            </span>
           </div>
           <div class="settings-item">
+            <span class="material-icons">
+              currency_ruble
+            </span>
             <el-switch
-                style="display: block"
                 active-color="#333333"
                 inactive-color="#333333"
-                active-text="EN"
-                inactive-text="RU"
                 disabled
             ></el-switch>
-            <!--                  <span class="material-icons">highlight</span>-->
+            <span class="material-icons">
+              euro
+            </span>
           </div>
         </div>
       </div>
@@ -89,10 +95,19 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 0;
 
     .logo {
-      font-size: 20px;
+      a {
+        text-decoration: none;
+      }
+      span {
+        font-family: 'Play', sans-serif;
+        font-size: 35px;
+        font-weight: bold;
+        color: var(--text-light-color);
+
+      }
 
       img {
         max-width: 100px;
@@ -106,10 +121,11 @@ export default {
     align-items: center;
 
     &__link {
-      color: var(--text-color);
+      color: var(--text-light-color);
       font-weight: 500;
-      font-size: 18px;
+      font-size: 20px;
       margin-left: 15px;
+      text-decoration: none;
     }
   }
 
@@ -117,11 +133,11 @@ export default {
     &-img {
       width: 50px;
       height: 50px;
-      border: 2px solid var(--border-color);
+      //border: 2px solid var(--border-color);
       border-radius: 50%;
       background: white;
       margin-left: 30px;
-      padding: 3px;
+      padding: 0;
     }
   }
 
@@ -136,7 +152,18 @@ export default {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      span {
+        color: var(--text-light-color);
+        font-size: 21px;
+        //width: 25px;
+        text-align: center;
+      }
     }
+  }
+
+  .el-switch{
+    height: 29px;
+    margin: 0 5px;
   }
 
 </style>

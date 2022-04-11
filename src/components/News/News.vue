@@ -3,7 +3,7 @@
     <div class="container">
       <h1 class="section-title">Новости</h1>
 
-      <el-carousel :interval="5000"  height="333px" type="card" arrow="always">
+      <el-carousel :interval="3000"  height="333px" type="card" arrow="always" pause-on-hover="true">
         <el-carousel-item v-for="item in carouselItems" :key="item">
           <img :src="item" alt="">
         </el-carousel-item>
@@ -84,9 +84,12 @@ export default {
   img {
     width: 100%;
     height: auto;
-    border: 3px solid var(--accent-second-color);
-    border-radius: 4px;
+    //border: 3px solid var(--accent-second-color);
+    //border-radius: 4px;
   }
+}
+.el-carousel__button {
+  background-color: var(--accent-second-color) !important;
 }
 .news {
   padding: 0 15px;
@@ -94,8 +97,8 @@ export default {
 
 .news-item {
   color: var(--text-color);
-  border: 4px solid var(--border-color);
-  border-radius: 4px;
+  //border: 4px solid var(--border-color);
+  //border-radius: 4px;
   background: var(--card-background);
   //box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -131,7 +134,7 @@ export default {
 
   &-body {
 
-    padding: 10px 10px 30px;
+    padding: 15px 10px 30px;
   }
 
   &-text {
